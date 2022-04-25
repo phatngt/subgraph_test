@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: SubGraph
@@ -21,7 +21,7 @@ dataSources:
         - Unpaused
       abis:
         - name: SubGraph
-          file: ./abis/SubGraph.json
+          file: SubGraph/abis/SubGraph.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,uint256)
           handler: handleApproval
@@ -35,4 +35,4 @@ dataSources:
           handler: handleTransfer
         - event: Unpaused(address)
           handler: handleUnpaused
-      file: ./src/mapping.ts
+      file: SubGraph/SubGraph.wasm
